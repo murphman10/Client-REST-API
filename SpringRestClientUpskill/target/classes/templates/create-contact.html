@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeLeaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form th:action="@{/createContact}" method="post" th:object="${contact}">
+			<label>First Name</label><input type="text" th:field="*{firstName}"/>
+			<label>Middle Name</label><input type="text" th:field="*{middleName}"/>
+			<label>Last Name</label><input type="text" th:field="*{lastName}"/>
+			<label>Phone Number</label><input type="text" th:field="*{phoneNumber}"/>
+			<input type="submit" value="Create Contact"/>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeLeaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<div th:each="contact : ${contacts}">
+			<p th:text="${contact.firstName}"/>
+			<a th:href="@{/{id}(id=${contact.contactId})}"> View Contact</a>
+			<a th:href="@{/update/{id}(id=${contact.contactId})}"> Update Contact</a>
+			<a th:href="@{/delete/{id}(id=${contact.contactId})}"> Delete Contact</a>
+		</div>
+		</div>
+		<a th:href="@{/createContact}"> Create Contact</a>
+	</body>
+</html>
